@@ -6,3 +6,4 @@ Intengrantes:
 
 Juan Guillermo Osorio Cachaya
 Yesid Santiago Angulo Lasso
+Guillermo Antonio Barrera Valencia
