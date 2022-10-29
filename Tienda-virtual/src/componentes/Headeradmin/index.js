@@ -1,36 +1,36 @@
 import React,{useContext} from 'react'
-import Nike from "../../images/Nike.jpg";
+import Nikes from "../../images/Nikes.jpg";
 import{Link} from "react-router-dom";
 import { Datacontext } from '../../context/Dataprovider';
 
 
-export const Header = () => {
+export const Headeradmin = () => {
   const value = useContext(Datacontext);
   const [menu,setMenu] = value.menu;
-const[carrito] = value.carrito;
-
   const tooglemenu = () => {
     setMenu(!menu)
   }
-
+  
   return (
     <header>
-      <Link to='/inicio'>
+      <Link to='/inicioadmin'>
         <div className="logo"> 
-        <img src={Nike} alt="logo" width="150"/>
+        <img src={Nikes} alt="logo" width="150"/>
         </div>
       </Link>
 <ul>
-  <li>
-<Link to='/inicio'>Cliente</Link>
+<li>
+  <Link to='/productosadmin'> LISTA DE PRODUCTOS</Link>
   </li>
   <li>
-<Link to='/inicioadmin'>Administrador</Link>
+<Link to='/inicioadmin'>MODIFICAR PRODUCTOS</Link>
+  </li>
+  <li>
+  <Link to='/Ventasadmin'> VENTAS</Link>
   </li>
 </ul>
 <div className='cart' onClick={tooglemenu}>
-  <box-icon name= "cart"></box-icon>
-  <span className="item_total">{carrito.length}</span>
+  <box-icon name= "cart">0</box-icon>
 </div>
     </header>
   )
