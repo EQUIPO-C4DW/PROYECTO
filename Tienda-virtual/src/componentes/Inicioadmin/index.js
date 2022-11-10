@@ -11,6 +11,9 @@ export const Inicioadmin = () => {
             <Link to="/productosadmin">
               <h1>Modificar Productos</h1>
             </Link>
+            <Link to="/agregarproductos">
+              <h1>Agregar Productos</h1>
+            </Link>
             <Link to="/Ventas">
               <h1>Ventas</h1>
             </Link>

@@ -25,6 +25,7 @@ export const Paginas = () => {
           <Route path="/Productosadmin" element={<Headeradmin/>} />
           <Route path="/Ventas" element={<Ventaslista/>} />
           
+          
 </Routes>
    </section>
   )

@@ -27,7 +27,7 @@ export const Productoitemadmin = ({
       <p className='price'>Precio: ${price}</p>
       </div>
       <div className='buttom'>
-      <button className='btn'onClick={()=>addCarrito(id)}>
+      <button className='btn'onClick={()=>modificarproducto(id)}>
         Modificar producto
       </button>
       </div>
