@@ -1,3 +1,5 @@
+import { AgregarProductos } from './componentes/AgregarProductos';
+
 const data = {
   status: "success",
   items: [

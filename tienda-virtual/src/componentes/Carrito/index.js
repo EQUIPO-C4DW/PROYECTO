@@ -2,14 +2,6 @@ import React, { useContext } from "react";
 import Card from '../../images/img07.jpg';
 import {Datacontext} from '../../context/Dataprovider';
 
-const obtenerCompra = () => {
-    var dataCarrito = localStorage.getItem("carrito");
-    if(dataCarrito){
-      return JSON.parse(dataCarrito);
-    }else{
-      return [];
-    }
-}
 
 export const Carrito = () => {
   const value = useContext(Datacontext)
