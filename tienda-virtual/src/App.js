@@ -4,7 +4,6 @@ import { LogoutButton } from "./Logout";
 import { Profile } from "./Profile";
 import React from "react";
 import {Header} from "./componentes/Header";
-import {Headeradmin} from "./componentes/Headeradmin";
 import 'boxicons';
 import {BrowserRouter as Router} from "react-router-dom";
 import {Paginas} from "./componentes/Paginas";

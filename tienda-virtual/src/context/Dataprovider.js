@@ -63,6 +63,7 @@ export const Dataprovider = (props) => {
 		getTotal()
 	},[carrito])
 
+    
     const value= {
         productos:[productos],
         dataCarrito:[dataCarrito],

@@ -22,7 +22,7 @@ export const Carrito = () => {
 	}
 	const increase = id =>{
 		carrito.forEach(item =>{
-			if(item.id === id){
+			if(item.id === id & item.stock >= 1){
 				item.cantidad +=1;
 			}
 			setCarrito([...carrito])
@@ -40,6 +40,8 @@ export const Carrito = () => {
 			setCarrito([...carrito])
 		}
 	}
+
+	
 
   const show1 = menu ? "carritos show" : "carrito";
 	const show2 = menu ? "carrito show" : "carrito";
@@ -94,7 +96,7 @@ export const Carrito = () => {
 
         <div className="carrito__footer">
           <h3>Total: ${total}</h3>
-          <button className="btn">Aceptar</button>
+          <button className="btn" type="submit">Aceptar</button>
         </div>
       </div>
     </div>

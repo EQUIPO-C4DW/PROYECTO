@@ -21,7 +21,7 @@ const data = {
       img1: "https://stockx-360.imgix.net/Nike-Dunk-Low-Off-White-Pine-Green/Images/Nike-Dunk-Low-Off-White-Pine-Green/Lv2/img",
       img2: ".jpg?auto=format,compress&q=90&updated_at=1606319825&w=1000",
       cantidad: 1,
-      stock: 8
+      stock: 1
     },
     {
       id: 3,
