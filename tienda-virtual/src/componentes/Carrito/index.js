@@ -30,16 +30,7 @@ export const Carrito = () => {
 			setCarrito([...carrito])
 		})
 	}
-	/* const AceptarCompra=id =>{
-		if(window.confirm("¿Quieres Aceptar la compra?"))
-		carrito.forEach((item, index)=>{
-			if(item.id ===id){
-				item.stock = item.stock-item.cantidad;
-				data.splice(index, Carrito.indexOf(item))
-			}
-			setCarrito([...carrito])
-		})
-	} */
+
 
 	const removeProducto = id =>{
 		if(window.confirm("¿Quieres suspender el producto?")){
