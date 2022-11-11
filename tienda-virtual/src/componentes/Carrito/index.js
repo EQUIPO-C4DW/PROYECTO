@@ -22,7 +22,7 @@ export const Carrito = () => {
 	}
 	const increase = id =>{
 		carrito.forEach(item =>{
-			if(item.id === id & item.stock >= 1){
+			if(item.id === id & item.stock > item.cantidad){
 				item.cantidad +=1;
 			}
 			setCarrito([...carrito])
