@@ -16,6 +16,7 @@ export const AgregarProductos = () => {
   const [ id,setId] = useState("uniqueId")
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
+  const [img1, setimg1] = useState("../");
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
 
