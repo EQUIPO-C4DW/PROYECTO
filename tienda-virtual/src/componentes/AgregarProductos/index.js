@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Falta from "../../images/Falta.jpg"
 
 export const AgregarProductos = () => {
 
@@ -16,20 +17,20 @@ export const AgregarProductos = () => {
   const [ id,setId] = useState("uniqueId")
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
-  const [img1, setimg1] = useState("../");
+  const [img1, setimg1] = useState({Falta});
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
 
   const botonGuardar = (e) => {
     e.preventDefault();
-    var miObjeto = {id, title, category, price , stock }
+    var miObjeto = {id, title, category,img1,price,stock }
     setRegistros([...registros, miObjeto]);
     limpiarFormulario();
   }
 
   function botonGuardarSimple(e){
     e.preventDefault();
-    var miObjeto = {id, title, category, price , stock }
+    var miObjeto = {id, title, category,img1, price , stock }
     setRegistros([...registros, miObjeto]);
     limpiarFormulario();
   }
@@ -39,6 +40,7 @@ export const AgregarProductos = () => {
     setId("");
     setTitle("");
     setCategory("");
+    setimg1("")
     setPrice("");
     setStock("");
     document.getElementById(id).reset();
@@ -51,14 +53,13 @@ export const AgregarProductos = () => {
 
   return (
       <center>
-        <div className="container" style={{width:"70%", marginTop:30, background:"#A8BCFF", padding:200}}>
+        <div className="container" style={{width:"70%", marginTop:30, padding:200}}>
             <form id={id} onSubmit={botonGuardarSimple}>
                 <h1 className='h1'>Agregar Producto</h1>
-                <input style={{marginBottom:30}} className="form-control form-control-lg" type="text" placeholder="Nombre del producto" onChange={(e)=>setTitle(e.target.value)} />
-                <textarea style={{marginBottom:0}} className="form-control form-control-lg" placeholder="Categoria del producto" onChange={(e)=>setCategory(e.target.value)}>
-                </textarea>
-                <input style={{marginBottom:30}} className="form-control form-control-lg" type="text" placeholder="Precio $ del producto" onChange={(e)=>setPrice(e.target.value)} />
-                <input style={{marginBottom:30}} className="form-control form-control-lg" type="text" placeholder="Stock" onChange={(e)=>setStock(e.target.value)} />
+                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Nombre del producto" onChange={(e)=>setTitle(e.target.value)} />
+                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Categoria del Producto" onChange={(e)=>setCategory(e.target.value)} />
+                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Precio $ del producto" onChange={(e)=>setPrice(e.target.value)} />
+                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Stock" onChange={(e)=>setStock(e.target.value)} />
                
 
                 <button className='btn btn-primary btn-lg'>
@@ -68,5 +69,6 @@ export const AgregarProductos = () => {
         </div>
     </center>
   )
+  console.log(registros)
 }
 
