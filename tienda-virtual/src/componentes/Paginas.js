@@ -8,13 +8,13 @@ import {ProductosLista } from './productos/index';
 import {ProductosListaAdmin} from './ProductosAdmin/index';
 import { Carrito } from './Carrito';
 import { Ventaslista } from './Ventas';
-import Formulario from './AgregarProductos';
+import{ AgregarProductos } from './AgregarProductos';
 
 export const Paginas = () => {
   return (
    <section>
     <Routes>
-          <Route path="/ventas" element={<Ventaslista/>} />
+          <Route path="/AgregarProductos" element={<AgregarProductos/>} />
           <Route path="/" element={<ProductosLista/>} />
           <Route path="/" element={<LoginButton />} />
           <Route path="/Inicio" element={<Inicio />} />

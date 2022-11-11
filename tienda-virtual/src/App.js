@@ -9,7 +9,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import {Paginas} from "./componentes/Paginas";
 import {Dataprovider} from "./context/Dataprovider";
 import {Carrito} from "./componentes/Carrito";
-import { ProductosLista } from "./componentes/productos";
+
 
 function App() {
   const { isAuthenticated } = useAuth0();
