@@ -56,13 +56,13 @@ export const AgregarProductos = () => {
         <div className="container" style={{width:"70%", marginTop:30, padding:200}}>
             <form id={id} onSubmit={botonGuardarSimple}>
                 <h1 className='h1'>Agregar Producto</h1>
-                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Nombre del producto" onChange={(e)=>setTitle(e.target.value)} />
-                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Categoria del Producto" onChange={(e)=>setCategory(e.target.value)} />
-                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Precio $ del producto" onChange={(e)=>setPrice(e.target.value)} />
-                <input style={{marginBottom:90}} className="form-control form-control-lg" type="text" placeholder="Stock" onChange={(e)=>setStock(e.target.value)} />
+                <input style={{marginBottom:90,padding:20}} className="form-control form-control-lg" type="text" placeholder="Nombre del producto" onChange={(e)=>setTitle(e.target.value)} />
+                <input style={{marginBottom:90,padding:20}} className="form-control form-control-lg" type="text" placeholder="Categoria del Producto" onChange={(e)=>setCategory(e.target.value)} />
+                <input style={{marginBottom:90,padding:20}} className="form-control form-control-lg" type="text" placeholder="Precio $ del producto" onChange={(e)=>setPrice(e.target.value)} />
+                <input style={{marginBottom:90,padding:20}} className="form-control form-control-lg" type="text" placeholder="Stock" onChange={(e)=>setStock(e.target.value)} />
                
 
-                <button className='btn btn-primary btn-lg'>
+                <button style={{marginBottom:90,padding:20}} className='btn btn-primary btn-dark'>
                     Agregar Producto
                 </button>
             </form>
