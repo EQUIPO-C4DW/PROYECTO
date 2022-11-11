@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Card from '../../images/img07.jpg';
 import {Datacontext} from '../../context/Dataprovider';
 import data from "../../Data";
@@ -9,6 +9,7 @@ export const Carrito = () => {
   const [menu, setMenu] = value.menu;
   const [carrito, setCarrito] = value.carrito;
   const [total] = value.total;
+
 
   const tooglefalse = () => {
     setMenu(false);
@@ -30,8 +31,7 @@ export const Carrito = () => {
 			setCarrito([...carrito])
 		})
 	}
-	/* const AceptarCompra=id =>{
-		if(window.confirm("¿Quieres Aceptar la compra?"))
+	
 		carrito.forEach((item, index)=>{
 			if(item.id ===id){
 				item.stock = item.stock-item.cantidad;
@@ -39,8 +39,8 @@ export const Carrito = () => {
 			}
 			setCarrito([...carrito])
 		})
-	} */
-
+	} 
+ 
 	const removeProducto = id =>{
 		if(window.confirm("¿Quieres suspender el producto?")){
 			carrito.forEach((item, index)=>{
@@ -108,9 +108,10 @@ export const Carrito = () => {
 
         <div className="carrito__footer">
           <h3>Total: ${total}</h3>
-          <button className="btn">Aceptar</button>
+          <button className="btn" onClick={() =>{AceptarCompra}}>Aceptar</button>
         </div>
       </div>
     </div>
   );
-};
+				};
+	

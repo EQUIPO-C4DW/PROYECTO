@@ -1,5 +1,4 @@
 import { createContext, useState,useEffect } from "react";
-import data from "../Data.js";
 import Data from "../Data.js";
 export const Datacontext = createContext();
 
@@ -7,7 +6,6 @@ export const Dataprovider = (props) => {
     const[dataCarrito,setdatacarrito] = useState([]);
     const [productos,setProductos] = useState([]);
     const [menu,setMenu] = useState(false);
-    const [carrito,setCarrito] = useState([]);
     const [total, setTotal] = useState(0);
 
     useEffect(()=>{
@@ -15,20 +13,15 @@ export const Dataprovider = (props) => {
         if (producto){setProductos(producto)}else{setProductos([])}
         
     },[]);
+    const[carrito,setCarrito] = useState( () =>{
+        const datCarrito = localStorage.getItem('dataCarrito');
+        const dataCarrito = JSON.parse(datCarrito);
+        return dataCarrito;
+    });
 
-
-    /* const modificarProducto = (id) => {
-        const data = productos.filter(producto => {
-            return producto.id === id;
-        })
-    }
-    useEffect(() =>{
-		const modificarProducto = JSON.parse(localStorage.getItem('modificarProducto'))
-		if(modificarProducto){
-			setProductos(modificarProducto)
-		}
-
-	},[]) */
+    useEffect(()=>{
+        localStorage.setItem('dataCarrito', JSON.stringify(carrito));
+    }, [carrito]);
 
     
     const addCarrito = (id) => {

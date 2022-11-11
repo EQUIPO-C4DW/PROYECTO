@@ -14,7 +14,7 @@ export const AgregarProductos = () => {
 
   const [registros, setRegistros] = useState(obtenerRegistros());
 
-  const [ id,setId] = useState("uniqueId")
+  const [ id,setId] = useState("RandomIdentity")
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [img1, setimg1] = useState({Falta});
