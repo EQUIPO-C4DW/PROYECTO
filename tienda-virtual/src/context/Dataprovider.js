@@ -7,12 +7,16 @@ export const Dataprovider = (props) => {
     const [productos,setProductos] = useState([]);
     const [menu,setMenu] = useState(false);
     const [total, setTotal] = useState(0);
+    
 
     useEffect(()=>{
-        const producto = Data.items
+        var registrs = localStorage.getItem("registros");
+        var registros=JSON.parse(registrs);
+        const producto = Data.items.concat(registros)
         if (producto){setProductos(producto)}else{setProductos([])}
         
     },[]);
+
     const[carrito,setCarrito] = useState( () =>{
         const datCarrito = localStorage.getItem('dataCarrito');
         const dataCarrito = JSON.parse(datCarrito);
