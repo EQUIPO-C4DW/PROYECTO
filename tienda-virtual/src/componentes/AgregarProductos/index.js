@@ -33,6 +33,7 @@ export const AgregarProductos = () => {
     var miObjeto = {id, title, category,img1, price , stock }
     setRegistros([...registros, miObjeto]);
     limpiarFormulario();
+    alert("Se ha creando un nuevo producto")
   }
 
 
